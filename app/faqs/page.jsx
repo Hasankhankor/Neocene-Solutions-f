@@ -14,7 +14,7 @@ const FaqsPage = () => {
       </div>
       <div style={{ backgroundColor: '#f9f9f9', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', padding: '20px', marginBottom: '20px' }}>
         <h3 style={{ marginTop: '0' }}>Can you handle projects of various scales?</h3>
-        <p>Yes, we have the capability to manage projects of all sizes and complexities. Whether it's small-scale geological mapping or large-scale database management, we have the expertise and resources to meet your project requirements.</p>
+        <p>Yes, we have the capability to manage projects of all sizes and complexities. Whether it&rsquo;s small-scale geological mapping or large-scale database management, we have the expertise and resources to meet your project requirements.</p>
       </div>
       <div style={{ backgroundColor: '#f9f9f9', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', padding: '20px', marginBottom: '20px' }}>
         <h3 style={{ marginTop: '0' }}>How do your services add value to projects?</h3>

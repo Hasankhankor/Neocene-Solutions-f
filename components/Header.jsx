@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 
 export default function Header() {
     return (
-        <div className="sticky inset-x-0 top-0 z-10 bg-opacity-60 bg-zinc-100 backdrop-blur-lg">
+        <div className="sticky inset-x-0 top-0 z-10 bg-gray-200 bg-opacity-60 backdrop-blur-lg">
             <div className="container flex items-center justify-between py-8">
                 <div className="flex items-center flex-col"> {/* Wrap logo and text inside a flex container, and make it column direction */}
                     <Image
@@ -20,16 +20,9 @@ export default function Header() {
                     />
                     <h1 style={{ marginLeft: "20px", color: "#f9aa0a" }}> {/* Add some margin to separate logo and text, and set text color */}
                         Neocene Solutions Inc.<br />
-
                     </h1>
                     <h1 style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', marginRight: '-19px', marginTop: '14px', fontSize: '18px' }}>Discovery Oriented!</h1>
-
                 </div>
-
-
-
-
-
                 <Navigation />
             </div>
         </div>

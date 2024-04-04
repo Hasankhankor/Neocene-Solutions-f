@@ -4,7 +4,7 @@ export default function AboutComponent() {
     return (
         <div className="container py-16">
             <div className="flex items-center justify-between pb-4">
-                <a className="py-4 text-3xl font-extrabold leading-tight text-gray-800 lg:text-5xl" href="">Who We Are </a>
+                <a className="py-4 text-3xl font-extrabold leading-tight text-gray-800 lg:text-5xl" href="" >Who We Are </a>
 
             </div>
             <div className="grid lg:grid-cols-2 place-items-center ">
@@ -13,13 +13,11 @@ export default function AboutComponent() {
                 </div>
 
                 <div className="items-center">
-                    <p className="px-12 pb-4 ">
-                    Neocene Solutions is more than a company; we are a collective of skilled geologists, engineers,
-                    and industry professionals dedicated to pushing the boundaries of whats possible in mineral exploration.
-                    With a shared commitment to excellence, our diverse team brings together a wealth of experience and expertise to every project we undertake.
-                      We pride ourselves on providing solutions that are not only versatile but also meticulously crafted to address the distinct challenges and objectives of our clients
-                      . Whether you seek individualized guidance or seek to streamline your entire operational framework,
-                      Neocene Solutions is committed to being your trusted partner in achieving success and realizing your goals.</p>
+                <p className="px-12 pb-4 text-gray-600" style={{ fontSize: "19px", scrollSnapPointsX: "none" }}>
+
+    We are a leading geological consultancy, offering comprehensive services and training tailored to your needs. Specializing in geological mapping, core logging, drill management, and database/project management, our expertly trained team adheres to modern industry standards. Our products provide invaluable insights into deposit types, adding substantial value to projects, facilitating progression to subsequent phases, and presenting data in formats readily understood by international investors. Additionally, our consultancy services cover a diverse range of geological mineralization models, offering data analysis and guidance for further exploration. From geological mapping and prospecting to soil mapping, drilling operations, and geochemical data interpretation, our team excels in all aspects of project management, ensuring seamless execution and successful outcomes.
+</p>
+
                     <div className="flex px-12 pt-4 gap-x-4 ">
                         <Image src="/image/awards.png" width={100} height={80} alt="" className=" h-[100px]" />
                         <Image src="/image/awards1.png" width={100} height={80} alt="" className=" h-[100px]" />

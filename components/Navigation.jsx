@@ -60,26 +60,28 @@ export default function Navigation() {
         href="/projects"
         className={pathname === "/projects" ? "text-black font-semibold" : ""}
     >
-        EVENTS
+        Services
     </Link>
-    <Link
-        href="/about"
-        className={pathname === "/about" ? "text-black font-semibold" : ""}
+	<Link
+        href="/faqs"
+        className={pathname === "/faqs" ? "text-black font-semibold" : ""}
     >
-        ABOUT
+        FAQS
     </Link>
-    <Link
+	<Link
         href="/careers"
         className={pathname === "/careers" ? "text-black font-semibold" : ""}
     >
         CAREERS
     </Link>
     <Link
-        href="/faqs"
-        className={pathname === "/faqs" ? "text-black font-semibold" : ""}
+        href="/about"
+        className={pathname === "/about" ? "text-black font-semibold" : ""}
     >
-        FAQS
+        ABOUT US
     </Link>
+
+
 </nav>
 <div
     className={` ${

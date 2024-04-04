@@ -11,7 +11,7 @@ export default function Footer() {
                         <h2 className="pb-4 text-xl font-semibold">COMPANY</h2>
                         <div className="flex flex-col ">
                             <Link className="py-1 hover:underline" href="/about">About Us</Link>
-                            <Link className="py-1 hover:underline" href="/press">Press</Link>
+                            <Link className="py-1 hover:underline" href="/press">Events</Link>
                             <Link className="py-1 hover:underline" href="/careers">Careers</Link>
                             <Link className="py-1 hover:underline" href="/contact">Contact</Link>
                         </div>
@@ -21,7 +21,7 @@ export default function Footer() {
                         <h2 className="pb-4 text-xl font-semibold">CONNECT</h2>
                         <div className="flex flex-col ">
                             <Link className="py-1 hover:underline" href="/about">Instagram</Link>
-                            <Link className="py-1 hover:underline" href="/press">Linkedin</Link>
+                            <Link className="py-1 hover:underline" href="https://www.linkedin.com/company/neocene-solutions-inc/">Linkedin</Link>
                             <Link className="py-1 hover:underline" href="/careers">Twitter</Link>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export default function Footer() {
                     <p className="pb-4 text-xl font-semibold">STAY UPDATED</p>
                     <div className="relative lg:max-w-sm">
                         <input className="w-full px-4 pr-20 border-2 border-gray-300 rounded-full h-14" type="text" placeholder="Email Address" />
-                        <button className="absolute h-10 px-3 text-sm text-white bg-black rounded-full top-2 right-2 hover:border-2 hover:border-black hover:bg-white hover:text-black">Subscribe</button>
+                        <button className="absolute h-10 px-3 text-sm text-white bg-black rounded-full top-2 right-2 hover:border-2 hover:bg-white hover:border-yellow-500 hover:text-black" style={{ marginLeft: "20px", color: "#f9aa0a", fontSize: '18px' }}>Subscribe</button>
                     </div>
                     <p className="pt-4 text-gray-500">
                         By subscribing to our newsletter, you agree to receive emails from us. Your personal data will be stored and processed in accordance with our Privacy Policy and you can unsubscribe at any time.

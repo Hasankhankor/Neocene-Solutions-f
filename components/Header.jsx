@@ -20,8 +20,8 @@ export default function Header() {
                     />
                     <h1 style={{ marginLeft: "20px", color: "#f9aa0a" }}> {/* Add some margin to separate logo and text, and set text color */}
                         Neocene Solutions Inc.<br />
+                        <span style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '18px' }}>Discovery Oriented!</span>
                     </h1>
-                    <h1 style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', marginRight: '-19px', marginTop: '14px', fontSize: '18px' }}>Discovery Oriented!</h1>
                 </div>
                 <Navigation />
             </div>

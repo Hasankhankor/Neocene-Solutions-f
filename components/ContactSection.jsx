@@ -9,7 +9,7 @@ export default function ContactSection() {
                     <h1 className="text-2xl font-medium lg:text-6xl" style={{fontSize: '22px'}}>Reach out to us and start your exploration journey today!</h1>
 
                 </div>
-                <a className="inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-yellow-500 hover:bg-yellow-400 hover:ring-2 hover:ring-yellow-500 ring-offset-2" href="">CONTACTUS <TbArrowUpRight className="text-xl" /> </a>
+                <a className="inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-yellow-500 hover:bg-yellow-400 hover:ring-2 hover:ring-yellow-500 ring-offset-2" href="/contact">CONTACTUS <TbArrowUpRight className="text-xl" /> </a>
 
             </div>
         </div>

@@ -5,7 +5,7 @@ export default function CatalogueSection() {
     const items = [
         {
             id: "01",
-            catagory: "Mineral Exporation",
+            catagory: "Geological Mapping",
             title: "Mineral Exploration",
             image: "https://ik.imagekit.io/os33grffu/images%20(4).jpg?updatedAt=1712163215786",
             description: "Geologists and exploration teams employ various techniques, such as geological mapping, geochemical analysis, and geophysical surveys, to identify potential areas for mineral resources.",
@@ -15,7 +15,7 @@ export default function CatalogueSection() {
             catagory: "Drill Management ",
             title: " Drill Management and Core Logging",
             image: "https://ik.imagekit.io/os33grffu/images%20(5).jpg?updatedAt=1712254318192",
-            description: "Our Drilling Management and Core Logging services cover all aspects of drill program oversight, from pinpointing drill targets to managing contractors and ensuring precise core handling and logging. ",
+            description: "Our Drilling Management and Core Logging services cover all aspects of drill program oversight, from pinpointing drill targets to managing contractors. ",
         },
         {
             id: "03",
@@ -33,42 +33,32 @@ export default function CatalogueSection() {
         },
         {
             id: "05",
-            catagory: "Geological Mapping",
-            title: "Geological Mapping & Prospecting",
+            catagory: "Exploration Skills Enhancement",
+            title: "Training of Exploration Skills",
             image: "https://ik.imagekit.io/os33grffu/images.png?updatedAt=1712254689915",
-            description: "Geological Mapping & Prospecting",
+            description: "We offer comprehensive workforce training tailored to elevate proficiency in modern mineral exploration techniques and project management skills.",
         },
     ];
 
     return (
-<div className="grid gap-8 divide-gray-300 lg:divide-x lg:gap-0 lg:grid-cols-5 md:grid-cols-2">
-  {/* Your content here */}
-
-
+        <div className="grid gap-8 lg:divide-x lg:gap-0 lg:grid-cols-5 md:grid-cols-2">
             {items.map((item) => (
                 <div key={item.id} className="relative overflow-hidden group">
                     <div>
-                        <Image src={item.image} width={380} height={100} alt="" className="w-full " />
+                        <Image src={item.image} width={380} height={100} alt="" className="w-full" />
                     </div>
                     <div className="absolute top-0 p-8 m-12 bg-white bg-opacity-60 backdrop-blur" style={{ backgroundColor: '#f9aa0a' }}>
                         <div className="flex justify-between pb-4 ">
                             <p className="text-sm">{item.catagory}</p>
-                            <span className="text-sm ">{item.id}</span>
+                            <span className="text-sm">{item.id}</span>
                         </div>
                         <a className="block text-xl font-semibold" href="">{item.title}</a>
                         <p className="py-4" style={{ color: 'white' }}>{item.description}</p>
-
                         <a className="inline-flex items-center font-medium" href="/titles/page.jsx">See Details <TbArrowNarrowRight className="ml-2 text-xl " /></a>
-
-
                     </div>
-
                     <div className="inset-0 flex-col items-center justify-end hidden gap-32 pb-16 text-xl transition duration-300 ease-in-out border-b-2 md:flex md:absolute group-hover:translate-y-full md:border-b-0 bg-zinc-100">
-                        <p className="tracking-wider -rotate-90 ">{item.catagory} </p>
-                        <span className="">
-                            {item.id}
-                        </span>
-
+                        <p className="tracking-wider">{item.catagory}</p>
+                        <span>{item.id}</span>
                     </div>
                 </div>
             ))}

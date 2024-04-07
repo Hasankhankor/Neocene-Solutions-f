@@ -6,6 +6,7 @@ export default function HeroSection() {
     return (
 
         <div className="bg-zinc-50">
+
             <div className="container py-8 text-center lg:py-0 lg:text-left lg:flex lg:justify-between ">
                 <div className="lg:w-1/2 xl:py-14 lg:py-8">
                 <p className="tracking-widest" style={{ fontSize: '19px' }}>Unveiling Earths Secrets, Empowering Exploration. </p>
@@ -32,7 +33,7 @@ Welcome esteemed visitors to Neocene Solutions, a realm where the convergence of
                 </div>
 
                 <div className="w-1/2">
-                <Image src="/image/hero1.jpg" width={800} height={500} alt=""
+                <Image src="/image/hero1.png" width={800} height={500} alt=""
                 className="absolute right-0 xl:h-[448px] xl:w-[700px] lg:h-[344px] lg:w-[500px] hidden lg:block border border-solid border-gray-500" />
 
                 </div>

@@ -9,7 +9,7 @@ export default function AboutComponent() {
             </div>
             <div className="grid lg:grid-cols-2 place-items-center ">
                 <div>
-                    <Image src="https://www.portableas.com/wp-content/uploads/Mining-in-Australia.jpg" width={900} height={500} alt="" className="max-md:hidden" />
+                    <Image src="https://ik.imagekit.io/os33grffu/Homepage%202.png?updatedAt=1712504269673" width={900} height={500} alt="" className="max-md:hidden" />
                 </div>
 
                 <div className="items-center">

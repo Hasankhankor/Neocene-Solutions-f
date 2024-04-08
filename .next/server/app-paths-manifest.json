@@ -1,13 +1,5 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/about/page": "app/about/page.js",
-  "/careers/page": "app/careers/page.js",
-  "/faqs/page": "app/faqs/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
-  "/gallery/page": "app/gallery/page.js",
   "/projects/page": "app/projects/page.js",
-  "/servicee/page": "app/servicee/page.js",
-  "/titles/page": "app/titles/page.js"
+  "/faqs/page": "app/faqs/page.js"
 }

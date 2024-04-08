@@ -49,8 +49,11 @@ export default function Projects() {
             </div>
             <div className="container grid grid-cols-2 gap-8 py-8">
                 {items.map((item) => (
-                    <div key={item.id} className="relative overflow-hidden rounded-xl group">
-                        <Image src={item.image} alt={item.title} width={500} height={300} />
+                 <div key={item.id} className="relative overflow-hidden rounded-xl group bg-yellow-500">
+
+                        <div className="w-full h-96 md:w-96 md:h-80"> {/* Larger size container */}
+                            <Image src={item.image} alt={item.title} layout="fixed" width={500} height={300} />
+                        </div>
                         <div className="absolute bottom-0 flex-col items-center justify-end w-full gap-32 p-12 text-xl text-white transition duration-300 ease-in-out translate-y-full bg-gradient-to-b from-transparent to-black group-hover:translate-y-0">
                             <h1 className="text-2xl font-semibold">{item.title}</h1>
                             <p className="py-4">{item.description}</p>

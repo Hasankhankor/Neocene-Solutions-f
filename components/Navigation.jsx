@@ -46,8 +46,6 @@ export default function Navigation() {
      </ul>
    </div>
 
-
-
           )}
         </div>
         <Link href="/faqs" className={pathname === "/faqs" ? "text-black font-semibold" : ""}>
@@ -56,9 +54,11 @@ export default function Navigation() {
         <Link href="/careers" className={pathname === "/careers" ? "text-black font-semibold" : ""}>
           CAREERS
         </Link>
-        <Link href="/about" className={pathname === "/about" ? "text-black font-semibold" : ""}>
-          ABOUT US
-        </Link>
+
+     <Link href="/about" className={`mobile-link ${pathname === "/about" ? "text-black font-semibold" : ""} mb-4 md:mb-0`}>
+  ABOUT US
+</Link>
+
       </nav>
     </>
   );

@@ -1,64 +1,76 @@
-// components/Navigation.jsx
 "use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TbArrowUpRight } from "react-icons/tb";
+import { TbMenu } from "react-icons/tb";
 
 export default function Navigation() {
   const pathname = usePathname();
-
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setIsOpen(true);
   };
 
-
   const handleMouseLeave = () => {
     setIsOpen(false);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
-      <nav className="lg:flex gap-x-6">
-        <Link href="/" className={pathname === "/" ? "text-black font-semibold" : ""}>
-          HOME
-        </Link>
-        <div
-          className="relative"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <a href="/projects" className={pathname === "/projects" ? "text-black font-semibold" : ""}>
-            Services
-          </a>
-          {isOpen && (
-     <div className={`absolute top-full mt-1 w-56 bg-white shadow-lg divide-y divide-gray-100 rounded-md ${isOpen ? 'text-gray-500' : ''}`}>
-     <ul className="py-1">
-       <li><Link href="/projects"> 1 : Geological Mapping</Link></li>
-       <li><Link href="/projects"> 2 : Drill Management </Link></li>
-       <li><Link href="/projects"> 3  :  Database and Mapping</Link></li>
-       <li><Link href="/projects"> 4  : Integrated Geophysical </Link></li>
-       <li><Link href="/projects"> 5  : Exploration Skills Enhancement </Link></li>
-
-     </ul>
-   </div>
-
-          )}
+      <nav className="flex justify-between items-center lg:flex lg:gap-x-6">
+        <div className="lg:hidden">
+          <button onClick={toggleMobileMenu} className="text-white">
+            <TbMenu size={24} />
+          </button>
         </div>
-        <Link href="/faqs" className={pathname === "/faqs" ? "text-black font-semibold" : ""}>
-          FAQS
-        </Link>
-        <Link href="/careers" className={pathname === "/careers" ? "text-black font-semibold" : ""}>
-          CAREERS
-        </Link>
-
-     <Link href="/about" className={`mobile-link ${pathname === "/about" ? "text-black font-semibold" : ""} mb-4 md:mb-0`}>
-  ABOUT US
-</Link>
-
+        <div className={`lg:flex ${isMobileMenuOpen ? 'block' : 'hidden'} lg:block gap-x-6`}>
+          <Link href="/" className={pathname === "/" ? "glow-orange" : "text-white"}>
+            HOME
+          </Link>
+          <div
+            className="relative mt-2 lg:mt-0"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <a href="/projects" className={pathname === "/projects" ? "glow-orange" : "text-white"}>
+              SERVICES
+            </a>
+            {isOpen && (
+              <div className="absolute top-full mt-1 w-56 bg-white shadow-lg rounded-md border border-gray-200 divide-y divide-gray-100">
+                <ul className="py-2">
+                  <li className="block px-4 py-2 hover:bg-orange-500 hover:text-white">
+                    <Link href="/GeologicalMapping">Geological Mapping</Link>
+                  </li>
+                  <li className="block px-4 py-2 hover:bg-orange-500 hover:text-white">
+                    <Link href="/DrillManagement">Drill Management</Link>
+                  </li>
+                  <li className="block px-4 py-2 hover:bg-orange-500 hover:text-white">
+                    <Link href="/DatabaseAndMapping">Database and Mapping Revival Solutions</Link>
+                  </li>
+                  <li className="block px-4 py-2 hover:bg-orange-500 hover:text-white">
+                    <Link href="/GeophysicalSolutions">Geophysical Solutions</Link>
+                  </li>
+                  <li className="block px-4 py-2 hover:bg-orange-500 hover:text-white">
+                    <Link href="/EnhancementofExploration">Capacity Building</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <Link href="/faqs" className={`mt-2 lg:mt-0 ${pathname === "/faqs" ? "glow-orange" : "text-white"}`}>
+            FAQS
+          </Link>
+          <Link href="/careers" className={pathname === "/careers" ? "glow-orange" : "text-white"}>
+            CAREERS
+          </Link>
+        </div>
       </nav>
     </>
   );

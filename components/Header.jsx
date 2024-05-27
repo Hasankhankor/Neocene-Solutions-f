@@ -1,31 +1,47 @@
 import Image from "next/image";
+import Link from "next/link"; // Import Link from next/link
 import Navigation from "./Navigation";
 
 export default function Header() {
     return (
-        <div className="sticky inset-x-0 top-0 z-10 bg-gray-200 bg-opacity-60 backdrop-blur-lg">
-            <div className="container flex items-center justify-between py-8">
-                <div className="flex items-center flex-col md:flex-row"> {/* Adjust flex direction for larger screens */}
-                    <div className="mr-4 md:mr-8"> {/* Add margin for separation */}
-                        <Image
-                            src="https://ik.imagekit.io/os33grffu/Justlogo-removebg-preview.png?updatedAt=1712072212323"
-                            alt="logo"
-                            width={50} // Set fixed width
-                            height={30} // Set fixed height
-                            className="logo"
-                            style={{
-                                objectFit: "cover", // Ensure the image covers the entire space
-                                maxWidth: "100%", // Ensure the image doesn't exceed its container
-                                display: "block" // Ensures proper spacing
-                            }}
-                        />
+        <div className="relative">
+            <Image
+                src="https://ik.imagekit.io/os33grffu/Backdrop.png?updatedAt=1712509362707"
+                alt="Background"
+                layout="fill"
+                objectFit="cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-70"></div> {/* Black transparent overlay */}
+            <div className="container flex items-center justify-between py-8 relative z-20">
+                <div className="flex items-center flex-col md:flex-row">
+                    <div className="mr-4 md:mr-8">
+                        <Link href="/"> {/* Wrap the logo with Link */}
+                            <a>
+                                <Image
+                                    src="https://ik.imagekit.io/os33grffu/Justlogo-removebg-preview.png?updatedAt=1712072212323"
+                                    alt="logo"
+                                    width={50}
+                                    height={50}
+                                    className="logo"
+                                    style={{
+                                        objectFit: "cover",
+                                        maxWidth: "100%",
+                                        display: "block"
+                                    }}
+                                />
+                            </a>
+                        </Link>
                     </div>
-                    <div> {/* Adjust margin for larger screens */}
-                        <h1 style={{ color: "#f9aa0a" }}>
-                            Neocene Solutions Inc.<br />
-                            <span style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '18px' }}>
-                                Discovery Oriented!
-                            </span>
+                    <div>
+                        <h1 style={{ color: "#ffffff" }}>
+                            <Link href="/"> {/* Wrap the company name with Link */}
+                                <a style={{ textDecoration: 'none' }}>
+                                    Neocene Solutions Inc.<br />
+                                    <span style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '18px', color: "#ffffff" }}>
+                                        Discovery Oriented!
+                                    </span>
+                                </a>
+                            </Link>
                         </h1>
                     </div>
                 </div>

@@ -4,59 +4,77 @@ export default function Projects() {
     const items = [
         {
             id: "01",
-            catagory: "Mineral Exporation",
-            title: "Mineral Exploration",
+            category: "Geological Mapping",
+            title: "Geological Mapping",
             image: "https://ik.imagekit.io/os33grffu/Tab%201.png?updatedAt=1712504480753",
             description: "Geologists and exploration teams employ various techniques, such as geological mapping, geochemical analysis, and geophysical surveys, to identify potential areas for mineral resources.",
+            link: "/GeologicalMapping"
         },
         {
             id: "02",
-            catagory: "Drill Management ",
-            title: " Drill Management and Core Logging",
+            category: "Drill Management",
+            title: "Drill Management and Core Logging",
             image: "https://ik.imagekit.io/os33grffu/Tab%202.png?updatedAt=1712504481176",
-            description: "Our Drilling Management and Core Logging services cover all aspects of drill program oversight, from pinpointing drill targets to managing contractors and ensuring precise core handling and logging. ",
+            description: "Our Drilling Management and Core Logging services cover all aspects of drill program oversight, from pinpointing drill targets to managing contractors.",
+            link: "/DrillManagement"
         },
         {
             id: "03",
-            catagory: " Database and Mapping",
-            title: " Database and Mapping Revival Solutions",
+            category: "Database Solutions",
+            title: "Database and Mapping Revival Solutions",
             image: "https://ik.imagekit.io/os33grffu/Tab%203.png?updatedAt=1712504594108",
-            description: "Our database management service not only organizes exploration databases efficiently but also revitalizes old maps, seamlessly integrating them with GIS-supported layers. ",
+            description: "Our database management service not only organizes exploration databases efficiently but also revitalizes old maps.",
+            link: "/DatabaseAndMapping"
         },
         {
             id: "04",
-            catagory: " Integrated Geophysical",
-            title: " Integrated Geophysical Solutions",
+            category: "Geophysical Solutions",
+            title: "Geophysical Solutions",
             image: "https://ik.imagekit.io/os33grffu/Tab%204.png?updatedAt=1712504769285",
-            description: "Our Geophysical Survey Design and Interpretation service offers tailored solutions for diverse deposit types, ensuring optimal outcomes in mineral exploration and mining. ",
+            description: "Our Geophysical Survey Design and Interpretation service offers tailored solutions for diverse deposit types, ensuring optimal outcomes in mineral exploration and mining.",
+            link: "/GeophysicalSolutions"
         },
         {
             id: "05",
-            catagory: "Geological Mapping",
-            title: "Geological Mapping & Prospecting",
-            image: "https://ik.imagekit.io/os33grffu/Tab%205.png?updatedAt=1712504650082",
-            description: "Geological Mapping & Prospecting",
+            category: "Enhancement of Exploration Skills",
+            title: "Enhancement of Exploration Skills",
+            image: "https://ik.imagekit.io/os33grffu/Tab%205.png?updatedAt=1712504650082s",
+            description: "We offer comprehensive workforce training tailored to elevate proficiency in modern mineral exploration techniques and project management skills.",
+            link: "/EnhancementofExploration"
         },
     ];
 
-    return (
-        <div className="">
-            <div className="bg-[url('https://ik.imagekit.io/os33grffu/Homepage%202.png?updatedAt=1712504269673')] bg-center bg-cover ">
-                <div>
-                <h1 className="container py-64 text-6xl font-semibold tracking-widest text-yellow-500 text-center">Services</h1>
+    const isValidImage = (url) => {
+        return url && (url.startsWith('/') || url.startsWith('http://') || url.startsWith('https://'));
+    };
 
+    const defaultImage = "/default-image.png"; // Path to your default image
+
+    return (
+        <div className="p-4 md:p-10 lg:p-20">
+            <div className="bg-[url('https://ik.imagekit.io/os33grffu/_51bec44b-6205-408a-a2c4-b202d6505d83%20(2).jfif?updatedAt=1716662262264')] bg-center bg-cover p-10 md:p-20">
+                <div className="bg-orange-500 p-2 w-1">
+                    <h1 className="text-2xl md:text-4xl font-semibold text-center text-white">Services</h1>
                 </div>
             </div>
-            <div className="container grid grid-cols-2 gap-8 py-8">
-                {items.map((item) => (
-                 <div key={item.id} className="relative overflow-hidden rounded-xl group bg-yellow-500">
 
-                        <div className="w-full h-96 md:w-96 md:h-80"> {/* Larger size container */}
-                            <Image src={item.image} alt={item.title} layout="fixed" width={500} height={300} />
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
+                {items.map((item) => (
+                    <div key={item.id} className="relative overflow-hidden rounded-lg shadow-lg bg-white">
+                        <div className="w-full h-60 md:h-72 relative">
+                            <Image
+                                src={isValidImage(item.image) ? item.image : defaultImage}
+                                alt={item.title}
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-t-lg"
+                            />
                         </div>
-                        <div className="absolute bottom-0 flex-col items-center justify-end w-full gap-32 p-12 text-xl text-white transition duration-300 ease-in-out translate-y-full bg-gradient-to-b from-transparent to-black group-hover:translate-y-0">
-                            <h1 className="text-2xl font-semibold">{item.title}</h1>
-                            <p className="py-4">{item.description}</p>
+                        <div className="p-6 bg-white">
+                            <div className="relative mb-8">
+                                <div className="absolute top-0 left-0 z-10 bg-orange-500 text-white py-1 px-2 rounded-tr-md rounded-bl-md">{item.title}</div>
+                                <p className="text-md text-white bg-black p-3">{item.description}</p>
+                            </div>
                         </div>
                     </div>
                 ))}

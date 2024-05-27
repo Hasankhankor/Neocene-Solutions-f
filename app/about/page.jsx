@@ -2,11 +2,13 @@ import Image from 'next/image'
 import { TbArrowUpRight } from "react-icons/tb"
 export default function About() {
     return (
-        <div>
-            <div className="bg-[url('https://ik.imagekit.io/os33grffu/hero1.png?updatedAt=1712509170167')] bg-center bg-cover ">
-                <h1 className="container py-32 text-6xl font-semibold tracking-widest text-center text-white lg:py-64 lg:text-left ">WHO ARE WE?</h1>
+        <div className="p-20">
 
-            </div>
+            <div className="bg-[url('https://ik.imagekit.io/os33grffu/Homepage%202.png?updatedAt=1712504269673')] bg-center bg-cover p-20">
+            <div style={{ backgroundColor: 'orange', padding: '7px', width:'2px' }}>
+    <h1 className="container py-12 text-4xl font-semibold text-center text-white">ABOUT US</h1>
+</div>
+</div>
             <div className="container ">
                 <div className="py-4 lg:py-14">
                     <h2 className="p-4 text-3xl font-semibold text-center lg:p-20 lg:text-5xl">What Sets Us Apart</h2>

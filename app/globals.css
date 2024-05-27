@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.glow-orange {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange;
+  }
